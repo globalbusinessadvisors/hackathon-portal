@@ -1,9 +1,9 @@
-import { Github, Twitter, Linkedin } from "lucide-react";
+import { Github, X, Linkedin } from "lucide-react";
 
 export const Footer = () => {
   const socialLinks = [
     { icon: Github, href: "#", label: "GitHub" },
-    { icon: Twitter, href: "#", label: "Twitter" },
+    { icon: X, href: "#", label: "X" },
     { icon: Linkedin, href: "#", label: "LinkedIn" },
   ];
 
