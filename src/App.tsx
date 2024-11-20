@@ -10,6 +10,8 @@ import Settings from "./pages/Settings";
 import Dashboard from "./pages/Dashboard";
 import Events from "./pages/Events";
 import Recordings from "./pages/Recordings";
+import Blog from "./pages/Blog";
+import BlogPost from "./pages/BlogPost";
 
 const queryClient = new QueryClient();
 
@@ -27,6 +29,8 @@ const App = () => (
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/events" element={<Events />} />
           <Route path="/recordings" element={<Recordings />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:id" element={<BlogPost />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
