@@ -17,31 +17,31 @@ export const EventCard = ({ event }: EventCardProps) => {
     <Card className={`glass-card ${!isPast ? 'hover-scale' : ''}`}>
       <CardHeader>
         <div className="flex justify-between items-start">
-          <CardTitle>{event.title}</CardTitle>
-          <Badge variant={isPast ? "outline" : "secondary"}>
+          <CardTitle className="text-primary">{event.title}</CardTitle>
+          <Badge variant={isPast ? "outline" : "secondary"} className={isPast ? "text-neutral-muted" : "text-white"}>
             {isPast ? "Past Event" : "Upcoming"}
           </Badge>
         </div>
         <CardDescription className="space-y-2 mt-2">
           <div className="flex items-center gap-2">
-            <Calendar className={`h-4 w-4 ${isPast ? 'text-muted-foreground' : 'text-primary'}`} />
-            <span>{format(eventDate, 'MMMM d, yyyy')}</span>
+            <Calendar className={`h-4 w-4 ${isPast ? 'text-neutral-muted' : 'text-primary'}`} />
+            <span className={isPast ? 'text-neutral-muted' : 'text-neutral'}>{format(eventDate, 'MMMM d, yyyy')}</span>
           </div>
           <div className="flex items-center gap-2">
-            <Clock className={`h-4 w-4 ${isPast ? 'text-muted-foreground' : 'text-primary'}`} />
-            <span>{event.time}</span>
+            <Clock className={`h-4 w-4 ${isPast ? 'text-neutral-muted' : 'text-primary'}`} />
+            <span className={isPast ? 'text-neutral-muted' : 'text-neutral'}>{event.time}</span>
           </div>
           <div className="flex items-center gap-2">
-            <MapPin className={`h-4 w-4 ${isPast ? 'text-muted-foreground' : 'text-primary'}`} />
-            <span>{event.location}</span>
+            <MapPin className={`h-4 w-4 ${isPast ? 'text-neutral-muted' : 'text-primary'}`} />
+            <span className={isPast ? 'text-neutral-muted' : 'text-neutral'}>{event.location}</span>
           </div>
         </CardDescription>
       </CardHeader>
       <CardContent>
-        <p className="text-muted-foreground mb-4">{event.description}</p>
+        <p className="text-neutral-muted mb-4">{event.description}</p>
         <Button 
           variant={isPast ? "outline" : "default"} 
-          className="w-full"
+          className={`w-full ${!isPast && 'bg-primary hover:bg-primary-hover text-white'}`}
         >
           {isPast ? "View Recording" : "Register Now"}
         </Button>
