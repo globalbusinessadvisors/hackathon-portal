@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 import { cn } from "@/lib/utils";
-import { BookOpen, Users, Archive, MessageSquare, Brain, Rocket, History } from "lucide-react";
+import { BookOpen, Users, Archive, MessageSquare, Brain, Rocket } from "lucide-react";
 
 const menuItems = {
   learning: [
-    { name: "Recent Sessions", href: "/recent-sessions", icon: History },
+    { name: "Recent Sessions", href: "#recent", icon: BookOpen },
     { name: "Community Discussions", href: "#discussions", icon: MessageSquare },
     { name: "Learning Resources", href: "#resources", icon: Brain },
     { name: "Session Archives", href: "#archives", icon: Archive }
