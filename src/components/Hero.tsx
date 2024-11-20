@@ -8,7 +8,7 @@ export const Hero = () => {
           <img 
             src="/lovable-uploads/3e6da3d8-c2eb-4fd0-ba21-01d867dce377.png" 
             alt="AI Hackerspace Logo" 
-            className="w-full h-full object-contain"
+            className="w-full h-full object-contain drop-shadow-xl"
           />
         </div>
         <div className="inline-block px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-sm">
@@ -29,7 +29,7 @@ export const Hero = () => {
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Button 
             size="lg" 
-            className="bg-white text-primary hover:bg-primary-light hover:text-primary-dark hover-scale"
+            className="bg-primary hover:bg-primary-hover text-white hover:text-white hover-scale"
           >
             Join Next Event
           </Button>

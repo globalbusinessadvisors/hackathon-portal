@@ -19,10 +19,10 @@ export const Newsletter = () => {
   return (
     <section className="py-24 px-4 sm:px-6 lg:px-8 bg-primary/5">
       <div className="max-w-2xl mx-auto text-center">
-        <h2 className="text-3xl font-bold tracking-tight mb-4">
+        <h2 className="text-3xl font-bold tracking-tight mb-4 text-primary">
           Stay Updated
         </h2>
-        <p className="text-lg text-muted-foreground mb-8">
+        <p className="text-lg text-neutral mb-8">
           Subscribe to our newsletter for weekly updates and insights.
         </p>
         <form onSubmit={handleSubmit} className="flex gap-4 max-w-md mx-auto">
@@ -34,7 +34,7 @@ export const Newsletter = () => {
             className="glass-card"
             required
           />
-          <Button type="submit" className="hover-scale">
+          <Button type="submit" className="bg-primary hover:bg-primary-hover text-white hover-scale">
             Subscribe
           </Button>
         </form>
