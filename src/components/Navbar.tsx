@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 import { User, Settings, LogOut } from "lucide-react";
 
 const Navbar = () => {
-  // For demo purposes, let's assume the user is logged in
   const isLoggedIn = true;
 
   return (
@@ -16,7 +15,12 @@ const Navbar = () => {
           <NavigationMenuList>
             <NavigationMenuItem>
               <Link to="/" className="mr-6 flex items-center space-x-2">
-                <span className="hidden font-bold sm:inline-block">
+                <img 
+                  src="/lovable-uploads/3e6da3d8-c2eb-4fd0-ba21-01d867dce377.png" 
+                  alt="AI Hackerspace" 
+                  className="h-8 w-8"
+                />
+                <span className="hidden font-bold sm:inline-block text-primary">
                   AI Hackerspace
                 </span>
               </Link>
