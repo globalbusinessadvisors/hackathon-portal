@@ -12,14 +12,19 @@ const Blog = () => {
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-primary-light/30">
       <Navbar />
       <main className="container py-8">
         <div className="space-y-12">
           {/* Hero Section */}
           <section className="text-center space-y-4">
-            <h1 className="text-4xl font-bold tracking-tight">AI Hackerspace Blog</h1>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
+            <div className="inline-block px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-sm mb-4">
+              <p className="text-sm font-medium text-primary">
+                AI Hackerspace Blog
+              </p>
+            </div>
+            <h1 className="text-4xl font-bold tracking-tight text-primary">Latest Blog Posts</h1>
+            <p className="text-neutral max-w-2xl mx-auto">
               Stay updated with our latest events, insights, and developments in the world of AI technology.
             </p>
           </section>
