@@ -1,40 +1,40 @@
-import { Toaster } from "@/components/ui/toaster";
-import { Toaster as Sonner } from "@/components/ui/sonner";
-import { TooltipProvider } from "@/components/ui/tooltip";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Index from "./pages/Index";
-import Login from "./pages/Login";
-import Profile from "./pages/Profile";
-import Settings from "./pages/Settings";
-import Dashboard from "./pages/Dashboard";
-import Events from "./pages/Events";
-import Recordings from "./pages/Recordings";
-import Blog from "./pages/Blog";
-import BlogPost from "./pages/BlogPost";
+import Navbar from "@/components/Navbar";
+import { Sidebar } from "@/components/dashboard/Sidebar";
+import { ContentHeader } from "@/components/dashboard/ContentHeader";
+import { SessionContent } from "@/components/dashboard/SessionContent";
+import { ParticipantsList } from "@/components/dashboard/ParticipantsList";
+import { Card, CardContent } from "@/components/ui/card";
+import { Brain, Code, Award } from "lucide-react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Index from "@/pages/Index";
+import Blog from "@/pages/Blog";
+import BlogPost from "@/pages/BlogPost";
+import Events from "@/pages/Events";
+import Recordings from "@/pages/Recordings";
+import Login from "@/pages/Login";
+import Profile from "@/pages/Profile";
+import Settings from "@/pages/Settings";
+import RecentSessions from "@/pages/RecentSessions";
+import { Toaster } from "react-hot-toast";
 
-const queryClient = new QueryClient();
-
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Index />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/:id" element={<BlogPost />} />
+        <Route path="/events" element={<Events />} />
+        <Route path="/recordings" element={<Recordings />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/recent-sessions" element={<RecentSessions />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/settings" element={<Settings />} />
+      </Routes>
       <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/profile" element={<Profile />} />
-          <Route path="/settings" element={<Settings />} />
-          <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/events" element={<Events />} />
-          <Route path="/recordings" element={<Recordings />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/blog/:id" element={<BlogPost />} />
-        </Routes>
-      </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
-);
+    </Router>
+  );
+}
 
 export default App;
