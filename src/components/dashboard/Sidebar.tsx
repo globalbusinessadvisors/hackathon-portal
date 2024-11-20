@@ -17,7 +17,7 @@ const menuItems = {
 
 export const Sidebar = () => {
   return (
-    <div className="w-64 min-h-screen border-r border-primary/10 bg-white/50 backdrop-blur-sm">
+    <div className="w-64 min-h-screen bg-white/50 backdrop-blur-sm border-r border-primary/10">
       <div className="p-6">
         <h2 className="text-lg font-semibold mb-6 text-neutral">Learning Content</h2>
         <nav className="space-y-1">
