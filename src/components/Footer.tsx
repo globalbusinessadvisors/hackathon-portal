@@ -1,10 +1,10 @@
-import { Github, X, Linkedin } from "lucide-react";
+import { Github, Twitter, Linkedin } from "lucide-react";
 
 export const Footer = () => {
   const socialLinks = [
     { icon: Github, href: "#", label: "GitHub" },
     { 
-      icon: X, 
+      icon: Twitter, 
       href: "#", 
       label: "X",
       className: "font-bold" // Added bold styling to match the image
