@@ -55,11 +55,12 @@ export default {
       },
       fontFamily: {
         sans: [
-          "-apple-system",
-          "BlinkMacSystemFont",
-          "San Francisco",
+          "SF Pro Display",
+          "SF Pro Icons",
           "Helvetica Neue",
-          "sans-serif",
+          "Helvetica",
+          "Arial",
+          "sans-serif"
         ],
       },
       keyframes: {
