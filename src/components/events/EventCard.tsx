@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Calendar, Clock, MapPin } from "lucide-react";
 import { Event } from "./types";
+import { format, parseISO } from "date-fns";
 
 interface EventCardProps {
   event: Event;
@@ -10,6 +11,7 @@ interface EventCardProps {
 
 export const EventCard = ({ event }: EventCardProps) => {
   const isPast = event.status === "past";
+  const eventDate = parseISO(event.date);
   
   return (
     <Card className={`glass-card ${!isPast ? 'hover-scale' : ''}`}>
@@ -23,7 +25,7 @@ export const EventCard = ({ event }: EventCardProps) => {
         <CardDescription className="space-y-2 mt-2">
           <div className="flex items-center gap-2">
             <Calendar className={`h-4 w-4 ${isPast ? 'text-muted-foreground' : 'text-primary'}`} />
-            <span>{new Date(event.date).toLocaleDateString()}</span>
+            <span>{format(eventDate, 'MMMM d, yyyy')}</span>
           </div>
           <div className="flex items-center gap-2">
             <Clock className={`h-4 w-4 ${isPast ? 'text-muted-foreground' : 'text-primary'}`} />

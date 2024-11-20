@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar";
 import { events } from "@/components/events/EventsData";
 import { generateBlogPostFromEvent } from "@/utils/blogUtils";
 import { Calendar, User, Clock } from "lucide-react";
+import { format, parseISO } from "date-fns";
 
 const BlogPost = () => {
   const { id } = useParams();
@@ -20,6 +21,7 @@ const BlogPost = () => {
   }
 
   const post = generateBlogPostFromEvent(event);
+  const postDate = parseISO(post.date);
 
   return (
     <div className="min-h-screen bg-background">
@@ -31,7 +33,7 @@ const BlogPost = () => {
             <div className="flex flex-wrap gap-4 text-muted-foreground">
               <span className="flex items-center gap-1">
                 <Calendar className="h-4 w-4" />
-                {post.date}
+                {format(postDate, 'MMMM d, yyyy')}
               </span>
               <span className="flex items-center gap-1">
                 <User className="h-4 w-4" />
