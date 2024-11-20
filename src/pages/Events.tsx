@@ -18,7 +18,7 @@ const events: Event[] = [
   {
     id: 1,
     title: "AI Development Best Practices",
-    date: "2024-03-15",
+    date: "2023-11-24",
     time: "12:00 PM EST",
     location: "Virtual Meeting",
     description: "Join us for an interactive session on developing responsible and efficient AI systems. We'll cover best practices, ethical considerations, and practical implementation tips.",
@@ -27,7 +27,7 @@ const events: Event[] = [
   {
     id: 2,
     title: "Machine Learning Workshop",
-    date: "2024-03-22",
+    date: "2023-12-01",
     time: "12:00 PM EST",
     location: "Virtual Meeting",
     description: "A hands-on workshop focusing on practical machine learning applications. Bring your laptop and get ready to code!",
@@ -36,7 +36,7 @@ const events: Event[] = [
   {
     id: 3,
     title: "Introduction to Large Language Models",
-    date: "2024-02-28",
+    date: "2023-11-17",
     time: "12:00 PM EST",
     location: "Virtual Meeting",
     description: "An overview of LLMs, their capabilities, and how to effectively use them in your projects.",
