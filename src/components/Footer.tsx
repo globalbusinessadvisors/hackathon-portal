@@ -7,7 +7,7 @@ export const Footer = () => {
       icon: X, 
       href: "#", 
       label: "X",
-      className: "font-bold" // Added bold styling to match the image
+      className: "font-bold text-black" // Added black color and bold styling for X logo
     },
     { icon: Linkedin, href: "#", label: "LinkedIn" },
   ];
@@ -29,7 +29,7 @@ export const Footer = () => {
               className={`text-muted-foreground hover:text-primary transition-colors ${social.className || ''}`}
               aria-label={social.label}
             >
-              <social.icon className="h-6 w-6" />
+              <social.icon className={`h-6 w-6 ${social.label === 'X' ? 'scale-90' : ''}`} />
             </a>
           ))}
         </div>
