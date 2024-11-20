@@ -23,24 +23,24 @@ export const RecordingCard = ({ recording }: RecordingCardProps) => {
       </div>
       <CardHeader>
         <div className="flex justify-between items-start">
-          <CardTitle className="text-xl">{recording.title}</CardTitle>
-          <Badge variant="secondary">
+          <CardTitle className="text-xl text-primary">{recording.title}</CardTitle>
+          <Badge variant="secondary" className="text-white">
             {recording.duration}
           </Badge>
         </div>
         <CardDescription className="space-y-2 mt-2">
           <div className="flex items-center gap-2">
             <Calendar className="h-4 w-4 text-primary" />
-            <span>{format(recordingDate, 'MMMM d, yyyy')}</span>
+            <span className="text-neutral">{format(recordingDate, 'MMMM d, yyyy')}</span>
           </div>
           <div className="flex items-center gap-2">
             <User className="h-4 w-4 text-primary" />
-            <span>{recording.presenter}</span>
+            <span className="text-neutral">{recording.presenter}</span>
           </div>
         </CardDescription>
       </CardHeader>
       <CardContent>
-        <p className="text-muted-foreground">{recording.description}</p>
+        <p className="text-neutral-muted">{recording.description}</p>
       </CardContent>
     </Card>
   );
