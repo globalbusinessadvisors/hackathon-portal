@@ -3,7 +3,12 @@ import { Github, X, Linkedin } from "lucide-react";
 export const Footer = () => {
   const socialLinks = [
     { icon: Github, href: "#", label: "GitHub" },
-    { icon: X, href: "#", label: "X" },
+    { 
+      icon: X, 
+      href: "#", 
+      label: "X",
+      className: "font-bold" // Added bold styling to match the image
+    },
     { icon: Linkedin, href: "#", label: "LinkedIn" },
   ];
 
@@ -21,7 +26,7 @@ export const Footer = () => {
             <a
               key={index}
               href={social.href}
-              className="text-muted-foreground hover:text-primary transition-colors"
+              className={`text-muted-foreground hover:text-primary transition-colors ${social.className || ''}`}
               aria-label={social.label}
             >
               <social.icon className="h-6 w-6" />
