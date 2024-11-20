@@ -8,7 +8,7 @@ import { Brain, Code, Award } from "lucide-react";
 
 const Dashboard = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-gradient-to-br from-primary-light/10 via-background to-background">
       <Navbar />
       <div className="flex">
         <Sidebar />
@@ -18,31 +18,31 @@ const Dashboard = () => {
           />
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-            <Card className="hover-scale glass-card">
+            <Card className="hover-scale glass-card border-primary/10">
               <CardContent className="pt-6">
                 <div className="flex items-center gap-3 mb-2">
-                  <Brain className="h-5 w-5 text-purple-500" />
-                  <p className="text-sm font-medium">
+                  <Brain className="h-5 w-5 text-primary" />
+                  <p className="text-sm font-medium text-neutral">
                     Weekly interactive sessions on AI/ML topics
                   </p>
                 </div>
               </CardContent>
             </Card>
-            <Card className="hover-scale glass-card">
+            <Card className="hover-scale glass-card border-primary/10">
               <CardContent className="pt-6">
                 <div className="flex items-center gap-3 mb-2">
-                  <Code className="h-5 w-5 text-purple-500" />
-                  <p className="text-sm font-medium">
+                  <Code className="h-5 w-5 text-primary" />
+                  <p className="text-sm font-medium text-neutral">
                     Live coding and discussions
                   </p>
                 </div>
               </CardContent>
             </Card>
-            <Card className="hover-scale glass-card">
+            <Card className="hover-scale glass-card border-primary/10">
               <CardContent className="pt-6">
                 <div className="flex items-center gap-3 mb-2">
-                  <Award className="h-5 w-5 text-purple-500" />
-                  <p className="text-sm font-medium">
+                  <Award className="h-5 w-5 text-primary" />
+                  <p className="text-sm font-medium text-neutral">
                     Earn participation certificates
                   </p>
                 </div>

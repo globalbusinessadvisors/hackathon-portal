@@ -17,38 +17,38 @@ const menuItems = {
 
 export const Sidebar = () => {
   return (
-    <div className="w-64 min-h-screen border-r bg-card/50 backdrop-blur-sm">
+    <div className="w-64 min-h-screen border-r border-primary/10 bg-white/50 backdrop-blur-sm">
       <div className="p-6">
-        <h2 className="text-lg font-semibold mb-6">Learning Content</h2>
+        <h2 className="text-lg font-semibold mb-6 text-neutral">Learning Content</h2>
         <nav className="space-y-1">
           {menuItems.learning.map((item) => (
             <Link
               key={item.name}
               to={item.href}
               className={cn(
-                "flex items-center gap-3 text-sm p-3 hover:bg-accent rounded-md",
+                "flex items-center gap-3 text-sm p-3 text-neutral-muted hover:bg-primary/5 rounded-md",
                 "transition-colors duration-200"
               )}
             >
-              <item.icon className="h-4 w-4" />
+              <item.icon className="h-4 w-4 text-primary" />
               {item.name}
             </Link>
           ))}
         </nav>
 
         <div className="mt-8">
-          <h3 className="text-sm font-medium mb-4">Projects</h3>
+          <h3 className="text-sm font-medium mb-4 text-neutral">Projects</h3>
           <nav className="space-y-1">
             {menuItems.projects.map((item) => (
               <Link
                 key={item.name}
                 to={item.href}
                 className={cn(
-                  "flex items-center gap-3 text-sm p-3 hover:bg-accent rounded-md",
+                  "flex items-center gap-3 text-sm p-3 text-neutral-muted hover:bg-primary/5 rounded-md",
                   "transition-colors duration-200"
                 )}
               >
-                <item.icon className="h-4 w-4" />
+                <item.icon className="h-4 w-4 text-primary" />
                 {item.name}
               </Link>
             ))}
