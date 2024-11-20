@@ -1,15 +1,36 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import { Clock, Award, Plus, ChevronDown, ChevronRight } from "lucide-react";
+import { Plus, ChevronDown, ChevronRight } from "lucide-react";
 import Navbar from "@/components/Navbar";
 
 const Dashboard = () => {
   const assignees = [
-    { name: "Adit Irawan", role: "Jr UX/UI Designer", avatar: "https://github.com/shadcn.png" },
-    { name: "Arif Ariyanto", role: "Jr UX/UI Designer", avatar: "https://github.com/shadcn.png" },
-    { name: "Ardhi Mubarak", role: "Jr UX/UI Designer", avatar: "https://github.com/shadcn.png" },
+    { name: "Adit Irawan", role: "Jr UI/UX Designer", avatar: "https://github.com/shadcn.png" },
+    { name: "Arif Ariyanto", role: "Jr UI/UX Designer", avatar: "https://github.com/shadcn.png" },
+    { name: "Ardhi Mubarak", role: "Jr UI/UX Designer", avatar: "https://github.com/shadcn.png" },
+    { name: "Eka Sarubairi", role: "Jr UI/UX Designer", avatar: "https://github.com/shadcn.png" },
+  ];
+
+  const trainers = [
+    {
+      name: "Bagus Fikri",
+      role: "Project Manager at Fikri Studio",
+      department: "Author • Admin Dept.",
+      avatar: "https://github.com/shadcn.png"
+    },
+    {
+      name: "Raihan Fikri",
+      role: "Project Manager at Fikri Studio",
+      department: "Author • Admin Dept.",
+      avatar: "https://github.com/shadcn.png"
+    },
+    {
+      name: "Tea Assiddiq",
+      role: "Project Manager at Fikri Studio",
+      department: "Admin Dept.",
+      avatar: "https://github.com/shadcn.png"
+    }
   ];
 
   return (
@@ -34,6 +55,18 @@ const Dashboard = () => {
                 Templates
               </a>
             </nav>
+
+            <div className="mt-8">
+              <h3 className="text-sm font-medium mb-2">Projects</h3>
+              <nav className="space-y-2">
+                <a href="#" className="flex items-center text-sm p-2 hover:bg-accent rounded-md">
+                  Figma basic
+                </a>
+                <a href="#" className="flex items-center text-sm p-2 bg-accent rounded-md">
+                  Fikri studio
+                </a>
+              </nav>
+            </div>
           </div>
         </div>
 
@@ -51,31 +84,29 @@ const Dashboard = () => {
             </TabsList>
 
             <TabsContent value="details" className="space-y-6">
-              <div className="grid grid-cols-3 gap-6">
+              <div className="grid grid-cols-3 gap-4">
                 <Card>
-                  <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                    <CardTitle className="text-sm font-medium">Sections & Chapters</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="text-2xl font-bold">3 sections • 4 Chapters</div>
+                  <CardContent className="pt-6">
+                    <div className="flex items-center gap-2 mb-2">
+                      <div className="h-4 w-4" />
+                      <p className="text-sm text-muted-foreground">3 section • 4 Chapters</p>
+                    </div>
                   </CardContent>
                 </Card>
                 <Card>
-                  <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                    <CardTitle className="text-sm font-medium">Time Estimation</CardTitle>
-                    <Clock className="h-4 w-4 text-muted-foreground" />
-                  </CardHeader>
-                  <CardContent>
-                    <div className="text-2xl font-bold">3 Hours</div>
+                  <CardContent className="pt-6">
+                    <div className="flex items-center gap-2 mb-2">
+                      <div className="h-4 w-4" />
+                      <p className="text-sm text-muted-foreground">3 Hours Estimation</p>
+                    </div>
                   </CardContent>
                 </Card>
                 <Card>
-                  <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                    <CardTitle className="text-sm font-medium">Certificate</CardTitle>
-                    <Award className="h-4 w-4 text-muted-foreground" />
-                  </CardHeader>
-                  <CardContent>
-                    <div className="text-2xl font-bold">Available</div>
+                  <CardContent className="pt-6">
+                    <div className="flex items-center gap-2 mb-2">
+                      <div className="h-4 w-4" />
+                      <p className="text-sm text-muted-foreground">Certificate of Completion</p>
+                    </div>
                   </CardContent>
                 </Card>
               </div>
@@ -85,7 +116,37 @@ const Dashboard = () => {
                   <Card>
                     <CardHeader>
                       <div className="flex justify-between items-center">
-                        <CardTitle>Page Content</CardTitle>
+                        <CardTitle className="text-lg">Trainer</CardTitle>
+                        <Button variant="outline" size="sm">
+                          <Plus className="h-4 w-4 mr-2" />
+                          Add trainer
+                        </Button>
+                      </div>
+                    </CardHeader>
+                    <CardContent>
+                      <div className="space-y-4">
+                        {trainers.map((trainer, index) => (
+                          <div key={index} className="flex items-center gap-3">
+                            <img
+                              src={trainer.avatar}
+                              alt={trainer.name}
+                              className="h-10 w-10 rounded-full"
+                            />
+                            <div>
+                              <div className="font-medium">{trainer.name}</div>
+                              <div className="text-sm text-muted-foreground">{trainer.role}</div>
+                              <div className="text-xs text-muted-foreground">{trainer.department}</div>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </CardContent>
+                  </Card>
+
+                  <Card className="mt-6">
+                    <CardHeader>
+                      <div className="flex justify-between items-center">
+                        <CardTitle className="text-lg">Page Content</CardTitle>
                         <Button variant="outline" size="sm">
                           <Plus className="h-4 w-4 mr-2" />
                           Add section
@@ -108,14 +169,29 @@ const Dashboard = () => {
                           </div>
                           <span className="text-sm text-muted-foreground">3 chapters</span>
                         </div>
+                        <div className="flex items-center justify-between p-2 hover:bg-accent/50 rounded-lg">
+                          <div className="flex items-center gap-2">
+                            <ChevronRight className="h-4 w-4" />
+                            <span>Conducting a heuristic evaluation</span>
+                          </div>
+                          <span className="text-sm text-muted-foreground">5 chapters</span>
+                        </div>
+                        <div className="flex items-center justify-between p-2 hover:bg-accent/50 rounded-lg">
+                          <div className="flex items-center gap-2">
+                            <ChevronRight className="h-4 w-4" />
+                            <span>Final Trough on UI Heuristic</span>
+                          </div>
+                          <span className="text-sm text-muted-foreground">2 chapters</span>
+                        </div>
                       </div>
                     </CardContent>
                   </Card>
                 </div>
+
                 <Card>
                   <CardHeader>
                     <div className="flex justify-between items-center">
-                      <CardTitle>Assignees</CardTitle>
+                      <CardTitle className="text-lg">Assignees</CardTitle>
                       <Button variant="outline" size="sm">
                         Assign
                       </Button>
@@ -136,8 +212,14 @@ const Dashboard = () => {
                               <div className="text-sm text-muted-foreground">{assignee.role}</div>
                             </div>
                           </div>
+                          <button className="text-muted-foreground hover:text-foreground">
+                            •••
+                          </button>
                         </div>
                       ))}
+                      <Button className="w-full" variant="outline">
+                        View All
+                      </Button>
                     </div>
                   </CardContent>
                 </Card>
