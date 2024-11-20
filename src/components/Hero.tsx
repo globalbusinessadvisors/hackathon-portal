@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 
 export const Hero = () => {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 gradient-bg text-white">
+    <div className="min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 bg-primary-light/30 text-neutral">
       <div className="space-y-8 text-center animate-fade-up">
         <div className="logo-container">
           <img 
@@ -12,17 +12,17 @@ export const Hero = () => {
           />
         </div>
         <div className="inline-block px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-sm">
-          <p className="text-sm font-medium text-white">
+          <p className="text-sm font-medium text-primary">
             Welcome to AI Hackerspace
           </p>
         </div>
-        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight">
+        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-primary">
           Where Innovation Meets
-          <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary-light to-secondary ml-2">
+          <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary ml-2">
             Intelligence
           </span>
         </h1>
-        <p className="max-w-2xl mx-auto text-lg sm:text-xl text-white/80">
+        <p className="max-w-2xl mx-auto text-lg sm:text-xl text-neutral">
           Join our weekly events to explore the cutting edge of AI technology
           and connect with fellow innovators.
         </p>
@@ -36,7 +36,7 @@ export const Hero = () => {
           <Button 
             size="lg" 
             variant="outline" 
-            className="border-white text-white hover:bg-white/20 hover-scale"
+            className="border-primary text-primary hover:bg-primary/10 hover-scale"
           >
             Learn More
           </Button>

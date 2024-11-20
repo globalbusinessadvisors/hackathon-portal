@@ -44,12 +44,12 @@
   }
 
   .gradient-bg {
-    @apply bg-gradient-to-br from-primary via-primary-dark to-secondary-dark;
+    @apply bg-gradient-to-br from-primary-light via-primary to-secondary;
   }
 }
 
 .logo-container {
-  @apply relative w-48 h-48 mx-auto mb-12;
+  @apply relative w-96 h-96 mx-auto mb-16;
 }
 
 .logo-container img {
