@@ -4,7 +4,7 @@ export const eventsQ4: Event[] = [
   {
     id: 3,
     title: "AI Model Optimization",
-    date: "2024-11-15",
+    date: "2024-11-16",
     time: "12:00 PM EDT",
     location: "Virtual Meeting",
     description: "Learn techniques for optimizing AI models for better performance.",
@@ -13,7 +13,7 @@ export const eventsQ4: Event[] = [
   {
     id: 4,
     title: "Natural Language Processing Workshop",
-    date: "2024-11-08",
+    date: "2024-11-09",
     time: "12:00 PM EDT",
     location: "Virtual Meeting",
     description: "Explore advanced NLP techniques and applications.",
@@ -22,7 +22,7 @@ export const eventsQ4: Event[] = [
   {
     id: 5,
     title: "Deep Learning Fundamentals",
-    date: "2024-11-01",
+    date: "2024-11-02",
     time: "12:00 PM EDT",
     location: "Virtual Meeting",
     description: "Understanding the core concepts of deep learning.",
@@ -31,7 +31,7 @@ export const eventsQ4: Event[] = [
   {
     id: 6,
     title: "AI for Business Applications",
-    date: "2024-10-25",
+    date: "2024-10-26",
     time: "12:00 PM EDT",
     location: "Virtual Meeting",
     description: "Implementing AI solutions in business contexts.",
@@ -40,7 +40,7 @@ export const eventsQ4: Event[] = [
   {
     id: 7,
     title: "AI System Architecture",
-    date: "2024-10-18",
+    date: "2024-10-19",
     time: "12:00 PM EDT",
     location: "Virtual Meeting",
     description: "Design and implementation of scalable AI systems.",
@@ -49,7 +49,7 @@ export const eventsQ4: Event[] = [
   {
     id: 8,
     title: "Machine Learning Operations",
-    date: "2024-10-11",
+    date: "2024-10-12",
     time: "12:00 PM EDT",
     location: "Virtual Meeting",
     description: "Best practices for MLOps and deployment.",
@@ -58,7 +58,7 @@ export const eventsQ4: Event[] = [
   {
     id: 9,
     title: "Computer Vision Applications",
-    date: "2024-10-04",
+    date: "2024-10-05",
     time: "12:00 PM EDT",
     location: "Virtual Meeting",
     description: "Practical applications of computer vision in AI.",

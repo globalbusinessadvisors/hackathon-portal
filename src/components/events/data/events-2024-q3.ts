@@ -4,7 +4,7 @@ export const eventsQ3: Event[] = [
   {
     id: 10,
     title: "Reinforcement Learning",
-    date: "2024-09-27",
+    date: "2024-09-28",
     time: "12:00 PM EDT",
     location: "Virtual Meeting",
     description: "Understanding and implementing reinforcement learning.",
@@ -13,7 +13,7 @@ export const eventsQ3: Event[] = [
   {
     id: 11,
     title: "AI Model Deployment",
-    date: "2024-09-20",
+    date: "2024-09-21",
     time: "12:00 PM EDT",
     location: "Virtual Meeting",
     description: "Strategies for deploying AI models in production.",
@@ -22,7 +22,7 @@ export const eventsQ3: Event[] = [
   {
     id: 12,
     title: "Natural Language Understanding",
-    date: "2024-09-13",
+    date: "2024-09-14",
     time: "12:00 PM EDT",
     location: "Virtual Meeting",
     description: "Advanced NLU techniques and implementations.",
@@ -31,7 +31,7 @@ export const eventsQ3: Event[] = [
   {
     id: 13,
     title: "AI Security Best Practices",
-    date: "2024-09-06",
+    date: "2024-09-07",
     time: "12:00 PM EDT",
     location: "Virtual Meeting",
     description: "Security considerations in AI development.",
@@ -40,7 +40,7 @@ export const eventsQ3: Event[] = [
   {
     id: 14,
     title: "Transfer Learning Workshop",
-    date: "2024-08-30",
+    date: "2024-08-31",
     time: "12:00 PM EDT",
     location: "Virtual Meeting",
     description: "Practical applications of transfer learning.",
@@ -49,7 +49,7 @@ export const eventsQ3: Event[] = [
   {
     id: 15,
     title: "AI Privacy and Data Protection",
-    date: "2024-08-23",
+    date: "2024-08-24",
     time: "12:00 PM EDT",
     location: "Virtual Meeting",
     description: "Implementing privacy measures in AI systems.",
@@ -58,7 +58,7 @@ export const eventsQ3: Event[] = [
   {
     id: 16,
     title: "Edge AI Development",
-    date: "2024-08-16",
+    date: "2024-08-17",
     time: "12:00 PM EDT",
     location: "Virtual Meeting",
     description: "Building AI applications for edge devices.",
@@ -67,7 +67,7 @@ export const eventsQ3: Event[] = [
   {
     id: 17,
     title: "AI Testing Strategies",
-    date: "2024-08-09",
+    date: "2024-08-10",
     time: "12:00 PM EDT",
     location: "Virtual Meeting",
     description: "Best practices for testing AI systems.",
@@ -76,7 +76,7 @@ export const eventsQ3: Event[] = [
   {
     id: 18,
     title: "Federated Learning",
-    date: "2024-08-02",
+    date: "2024-08-03",
     time: "12:00 PM EDT",
     location: "Virtual Meeting",
     description: "Understanding federated learning techniques.",
