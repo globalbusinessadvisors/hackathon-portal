@@ -4,13 +4,6 @@ export const Hero = () => {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 bg-primary-light/30 text-neutral">
       <div className="space-y-8 text-center animate-fade-up">
-        <div className="logo-container">
-          <img 
-            src="/lovable-uploads/3e6da3d8-c2eb-4fd0-ba21-01d867dce377.png" 
-            alt="AI Hackerspace Logo" 
-            className="w-full h-full object-contain drop-shadow-xl"
-          />
-        </div>
         <div className="inline-block px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-sm">
           <p className="text-sm font-medium text-primary">
             Welcome to AI Hackerspace

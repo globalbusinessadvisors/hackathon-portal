@@ -47,11 +47,3 @@
     @apply bg-gradient-to-br from-primary-light via-primary to-secondary;
   }
 }
-
-.logo-container {
-  @apply relative w-96 h-96 mx-auto mb-16;
-}
-
-.logo-container img {
-  @apply w-full h-full object-contain;
-}
