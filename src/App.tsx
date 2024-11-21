@@ -12,6 +12,7 @@ import Events from "./pages/Events";
 import Recordings from "./pages/Recordings";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
+import RecentSessions from "./pages/RecentSessions";
 
 const queryClient = new QueryClient();
 
@@ -31,6 +32,7 @@ const App = () => (
           <Route path="/recordings" element={<Recordings />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:id" element={<BlogPost />} />
+          <Route path="/recent-sessions" element={<RecentSessions />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
