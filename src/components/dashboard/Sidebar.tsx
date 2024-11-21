@@ -6,7 +6,7 @@ const menuItems = {
   learning: [
     { name: "Recent Sessions", href: "/recent-sessions", icon: BookOpen },
     { name: "Community Discussions", href: "/community-discussions", icon: MessageSquare },
-    { name: "Learning Resources", href: "#resources", icon: Brain },
+    { name: "Learning Resources", href: "/learning-resources", icon: Brain },
     { name: "Session Archives", href: "#archives", icon: Archive }
   ],
   projects: [

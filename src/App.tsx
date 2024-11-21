@@ -14,6 +14,7 @@ import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import RecentSessions from "./pages/RecentSessions";
 import CommunityDiscussions from "./pages/CommunityDiscussions";
+import LearningResources from "./pages/LearningResources";
 
 const queryClient = new QueryClient();
 
@@ -35,6 +36,7 @@ const App = () => (
           <Route path="/blog/:id" element={<BlogPost />} />
           <Route path="/recent-sessions" element={<RecentSessions />} />
           <Route path="/community-discussions" element={<CommunityDiscussions />} />
+          <Route path="/learning-resources" element={<LearningResources />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
