@@ -13,6 +13,7 @@ import Recordings from "./pages/Recordings";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import RecentSessions from "./pages/RecentSessions";
+import CommunityDiscussions from "./pages/CommunityDiscussions";
 
 const queryClient = new QueryClient();
 
@@ -33,6 +34,7 @@ const App = () => (
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:id" element={<BlogPost />} />
           <Route path="/recent-sessions" element={<RecentSessions />} />
+          <Route path="/community-discussions" element={<CommunityDiscussions />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
