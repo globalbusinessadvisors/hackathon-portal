@@ -23,7 +23,7 @@ const hosts: Member[] = [
     role: "Enterprise AI Leader",
     avatar: "/placeholder.svg",
     expertise: ["Enterprise AI", "Machine Learning", "AI Strategy"],
-    location: "Greater Toronto Area",
+    location: "Greater Toronto Area, Ontario, Canada",
     type: "host"
   },
   {
@@ -32,7 +32,7 @@ const hosts: Member[] = [
     role: "Human AI Expert",
     avatar: "/placeholder.svg",
     expertise: ["Human AI", "AI Ethics", "AI Development"],
-    location: "Toronto",
+    location: "Toronto, Ontario, Canada",
     type: "host"
   }
 ];
