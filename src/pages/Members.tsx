@@ -107,33 +107,62 @@ export default function Members() {
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
-      <div className="container py-8">
-        <div className="flex flex-col gap-12">
-          <div className="flex flex-col gap-4">
-            <h1 className="text-4xl font-bold text-primary">Community Members</h1>
-            <p className="text-neutral-muted">
-              Connect with AI enthusiasts and experts from our community
-            </p>
-            <SearchBar onSearch={setSearchQuery} />
+      <div className="relative">
+        {/* Hero Section with gradient background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-primary-light/30 via-primary/20 to-secondary/10 pointer-events-none h-[500px]" />
+        
+        <div className="container relative py-12">
+          <div className="flex flex-col gap-8 mb-16">
+            <div className="text-center max-w-3xl mx-auto">
+              <h1 className="text-4xl md:text-5xl font-bold text-primary mb-4 animate-fade-in">
+                Community Members
+              </h1>
+              <p className="text-lg text-neutral-muted mb-8 animate-fade-up">
+                Connect with AI enthusiasts and experts from our vibrant community
+              </p>
+              <div className="max-w-md mx-auto">
+                <SearchBar onSearch={setSearchQuery} />
+              </div>
+            </div>
           </div>
 
-          <MemberSection 
-            title="Hosts" 
-            description="Our dedicated community leaders and organizers"
-            members={hosts}
-          />
+          <div className="space-y-16">
+            <MemberSection 
+              title="Hosts" 
+              description="Our dedicated community leaders and organizers"
+              members={hosts.filter(member => 
+                member.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                member.role.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                member.expertise.some(skill => 
+                  skill.toLowerCase().includes(searchQuery.toLowerCase())
+                )
+              )}
+            />
 
-          <MemberSection 
-            title="Presenters" 
-            description="Expert speakers sharing their knowledge and insights"
-            members={presenters}
-          />
+            <MemberSection 
+              title="Presenters" 
+              description="Expert speakers sharing their knowledge and insights"
+              members={presenters.filter(member =>
+                member.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                member.role.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                member.expertise.some(skill => 
+                  skill.toLowerCase().includes(searchQuery.toLowerCase())
+                )
+              )}
+            />
 
-          <MemberSection 
-            title="Participants" 
-            description="Active members of our growing community"
-            members={participants}
-          />
+            <MemberSection 
+              title="Participants" 
+              description="Active members of our growing community"
+              members={participants.filter(member =>
+                member.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                member.role.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                member.expertise.some(skill => 
+                  skill.toLowerCase().includes(searchQuery.toLowerCase())
+                )
+              )}
+            />
+          </div>
         </div>
       </div>
     </div>

@@ -8,15 +8,21 @@ interface MemberSectionProps {
 }
 
 export const MemberSection = ({ title, description, members }: MemberSectionProps) => (
-  <section className="space-y-6">
-    <div>
-      <h2 className="text-2xl font-semibold text-primary">{title}</h2>
-      <p className="text-neutral-muted mt-1">{description}</p>
+  <section className="relative animate-fade-up">
+    <div className="mb-8">
+      <h2 className="text-3xl font-bold text-primary mb-2">{title}</h2>
+      <p className="text-neutral-muted text-lg">{description}</p>
     </div>
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {members.map((member) => (
-        <MemberCard key={member.id} member={member} />
-      ))}
-    </div>
+    {members.length > 0 ? (
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {members.map((member) => (
+          <MemberCard key={member.id} member={member} />
+        ))}
+      </div>
+    ) : (
+      <div className="text-center py-8 bg-white/50 backdrop-blur-sm rounded-lg border border-primary/10">
+        <p className="text-neutral-muted">No members found matching your search criteria.</p>
+      </div>
+    )}
   </section>
 );
