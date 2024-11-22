@@ -4,7 +4,7 @@ export const eventsQ3: Event[] = [
   {
     id: 10,
     title: "Reinforcement Learning",
-    date: "2024-09-28",
+    date: "2024-09-27",
     time: "12:00 PM EDT",
     location: "Virtual Meeting",
     description: "Understanding and implementing reinforcement learning.",
@@ -13,7 +13,7 @@ export const eventsQ3: Event[] = [
   {
     id: 11,
     title: "AI Model Deployment",
-    date: "2024-09-21",
+    date: "2024-09-20",
     time: "12:00 PM EDT",
     location: "Virtual Meeting",
     description: "Strategies for deploying AI models in production.",
@@ -22,7 +22,7 @@ export const eventsQ3: Event[] = [
   {
     id: 12,
     title: "Natural Language Understanding",
-    date: "2024-09-14",
+    date: "2024-09-13",
     time: "12:00 PM EDT",
     location: "Virtual Meeting",
     description: "Advanced NLU techniques and implementations.",
@@ -31,7 +31,7 @@ export const eventsQ3: Event[] = [
   {
     id: 13,
     title: "AI Security Best Practices",
-    date: "2024-09-07",
+    date: "2024-09-06",
     time: "12:00 PM EDT",
     location: "Virtual Meeting",
     description: "Security considerations in AI development.",
