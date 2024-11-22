@@ -19,20 +19,20 @@ interface Member {
 const hosts: Member[] = [
   {
     id: "1",
-    name: "Dr. Sarah Chen",
-    role: "AI Researcher",
+    name: "Reuven Cohen",
+    role: "Enterprise AI Leader",
     avatar: "/placeholder.svg",
-    expertise: ["Machine Learning", "Neural Networks", "Computer Vision"],
-    location: "Toronto, ON",
+    expertise: ["Enterprise AI", "Machine Learning", "AI Strategy"],
+    location: "Greater Toronto Area",
     type: "host"
   },
   {
     id: "4",
-    name: "Emma Thompson",
-    role: "AI Ethics Specialist",
+    name: "Robert Ranson",
+    role: "Human AI Expert",
     avatar: "/placeholder.svg",
-    expertise: ["AI Ethics", "Policy", "Governance"],
-    location: "Ottawa, ON",
+    expertise: ["Human AI", "AI Ethics", "AI Development"],
+    location: "Toronto",
     type: "host"
   }
 ];
