@@ -2,6 +2,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Brain, Clock, Users } from "lucide-react";
+import { Sidebar } from "@/components/dashboard/Sidebar";
+import Navbar from "@/components/Navbar";
 
 interface Resource {
   id: number;
@@ -74,48 +76,52 @@ const getDifficultyColor = (difficulty: Resource["difficulty"]) => {
 
 const LearningResources = () => {
   return (
-    <div className="flex h-screen bg-background">
-      <main className="flex-1 overflow-hidden">
-        <div className="container mx-auto py-6">
-          <div className="mb-8">
-            <h1 className="text-3xl font-bold text-neutral">Learning Resources</h1>
-            <p className="text-neutral-muted mt-2">
-              Explore our curated collection of AI learning materials and workshops
-            </p>
-          </div>
-
-          <ScrollArea className="h-[calc(100vh-12rem)]">
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-              {resources.map((resource) => (
-                <Card key={resource.id} className="hover:shadow-lg transition-shadow">
-                  <CardHeader>
-                    <div className="flex justify-between items-start">
-                      <Badge variant="secondary">{resource.category}</Badge>
-                      <Badge className={getDifficultyColor(resource.difficulty)}>
-                        {resource.difficulty}
-                      </Badge>
-                    </div>
-                    <CardTitle className="mt-4">{resource.title}</CardTitle>
-                    <CardDescription>{resource.description}</CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="flex items-center gap-4 text-sm text-neutral-muted">
-                      <div className="flex items-center gap-1">
-                        <Clock className="h-4 w-4" />
-                        <span>{resource.duration}</span>
-                      </div>
-                      <div className="flex items-center gap-1">
-                        <Users className="h-4 w-4" />
-                        <span>{resource.participants} learners</span>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
+    <div className="min-h-screen bg-background">
+      <Navbar />
+      <div className="flex">
+        <Sidebar />
+        <main className="flex-1 p-6">
+          <div className="container mx-auto">
+            <div className="mb-8">
+              <h1 className="text-3xl font-bold text-neutral">Learning Resources</h1>
+              <p className="text-neutral-muted mt-2">
+                Explore our curated collection of AI learning materials and workshops
+              </p>
             </div>
-          </ScrollArea>
-        </div>
-      </main>
+
+            <ScrollArea className="h-[calc(100vh-12rem)]">
+              <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                {resources.map((resource) => (
+                  <Card key={resource.id} className="hover:shadow-lg transition-shadow">
+                    <CardHeader>
+                      <div className="flex justify-between items-start">
+                        <Badge variant="secondary">{resource.category}</Badge>
+                        <Badge className={getDifficultyColor(resource.difficulty)}>
+                          {resource.difficulty}
+                        </Badge>
+                      </div>
+                      <CardTitle className="mt-4">{resource.title}</CardTitle>
+                      <CardDescription>{resource.description}</CardDescription>
+                    </CardHeader>
+                    <CardContent>
+                      <div className="flex items-center gap-4 text-sm text-neutral-muted">
+                        <div className="flex items-center gap-1">
+                          <Clock className="h-4 w-4" />
+                          <span>{resource.duration}</span>
+                        </div>
+                        <div className="flex items-center gap-1">
+                          <Users className="h-4 w-4" />
+                          <span>{resource.participants} learners</span>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </ScrollArea>
+          </div>
+        </main>
+      </div>
     </div>
   );
 };
