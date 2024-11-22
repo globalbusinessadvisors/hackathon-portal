@@ -31,7 +31,7 @@ export const eventsQ4: Event[] = [
   {
     id: 6,
     title: "AI for Business Applications",
-    date: "2024-10-26",
+    date: "2024-10-25",
     time: "12:00 PM EDT",
     location: "Virtual Meeting",
     description: "Implementing AI solutions in business contexts.",
@@ -40,7 +40,7 @@ export const eventsQ4: Event[] = [
   {
     id: 7,
     title: "AI System Architecture",
-    date: "2024-10-19",
+    date: "2024-10-18",
     time: "12:00 PM EDT",
     location: "Virtual Meeting",
     description: "Design and implementation of scalable AI systems.",
@@ -49,7 +49,7 @@ export const eventsQ4: Event[] = [
   {
     id: 8,
     title: "Machine Learning Operations",
-    date: "2024-10-12",
+    date: "2024-10-11",
     time: "12:00 PM EDT",
     location: "Virtual Meeting",
     description: "Best practices for MLOps and deployment.",
@@ -58,7 +58,7 @@ export const eventsQ4: Event[] = [
   {
     id: 9,
     title: "Computer Vision Applications",
-    date: "2024-10-05",
+    date: "2024-10-04",
     time: "12:00 PM EDT",
     location: "Virtual Meeting",
     description: "Practical applications of computer vision in AI.",
