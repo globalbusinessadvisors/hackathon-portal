@@ -11,7 +11,7 @@ const menuItems = {
   ],
   projects: [
     { name: "AI Projects", href: "/ai-projects", icon: Rocket },
-    { name: "Hackathon Ideas", href: "#hackathon", icon: Users }
+    { name: "Hackathon Ideas", href: "/hackathon-ideas", icon: Users }
   ]
 };
 
