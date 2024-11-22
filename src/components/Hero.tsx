@@ -55,7 +55,7 @@ export const Hero = () => {
             size="lg" 
             variant="outline" 
             className="border-primary text-primary hover:bg-primary/10 hover-scale"
-            onClick={() => navigate("/events")}
+            onClick={() => navigate("/learn-more")}
           >
             Learn More
           </Button>
