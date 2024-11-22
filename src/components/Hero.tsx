@@ -1,6 +1,30 @@
 import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
+import { events } from "./events/EventsData";
+import { useToast } from "./ui/use-toast";
 
 export const Hero = () => {
+  const navigate = useNavigate();
+  const { toast } = useToast();
+  
+  const handleJoinEvent = () => {
+    const upcomingEvent = events.find(event => event.status === "upcoming");
+    
+    if (upcomingEvent) {
+      navigate("/events");
+      toast({
+        title: "Redirecting to events page",
+        description: `Join ${upcomingEvent.title}`,
+      });
+    } else {
+      toast({
+        title: "No upcoming events",
+        description: "Please check back later for new events",
+        variant: "destructive",
+      });
+    }
+  };
+
   return (
     <div className="min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 bg-primary-light/30 text-neutral">
       <div className="space-y-8 text-center animate-fade-up">
@@ -23,6 +47,7 @@ export const Hero = () => {
           <Button 
             size="lg" 
             className="bg-primary hover:bg-primary-hover text-white hover:text-white hover-scale"
+            onClick={handleJoinEvent}
           >
             Join Next Event
           </Button>
@@ -30,6 +55,7 @@ export const Hero = () => {
             size="lg" 
             variant="outline" 
             className="border-primary text-primary hover:bg-primary/10 hover-scale"
+            onClick={() => navigate("/events")}
           >
             Learn More
           </Button>
