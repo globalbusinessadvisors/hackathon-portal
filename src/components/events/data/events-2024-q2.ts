@@ -40,7 +40,7 @@ export const eventsQ2: Event[] = [
   {
     id: 23,
     title: "AI Infrastructure Design",
-    date: "2024-06-29",
+    date: "2024-06-28",
     time: "12:00 PM EDT",
     location: "Virtual Meeting",
     description: "Designing robust AI infrastructure.",
@@ -49,7 +49,7 @@ export const eventsQ2: Event[] = [
   {
     id: 24,
     title: "Advanced Deep Learning",
-    date: "2024-06-22",
+    date: "2024-06-21",
     time: "12:00 PM EDT",
     location: "Virtual Meeting",
     description: "Advanced techniques in deep learning.",
@@ -58,7 +58,7 @@ export const eventsQ2: Event[] = [
   {
     id: 25,
     title: "AI Project Management",
-    date: "2024-06-15",
+    date: "2024-06-14",
     time: "12:00 PM EDT",
     location: "Virtual Meeting",
     description: "Managing AI development projects.",
@@ -67,7 +67,7 @@ export const eventsQ2: Event[] = [
   {
     id: 26,
     title: "MLOps Fundamentals",
-    date: "2024-06-08",
+    date: "2024-06-07",
     time: "12:00 PM EDT",
     location: "Virtual Meeting",
     description: "Introduction to MLOps principles.",
