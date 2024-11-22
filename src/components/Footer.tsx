@@ -23,9 +23,9 @@ export const Footer = () => {
   ];
 
   const contactInfo = [
-    { icon: Mail, text: "contact@aihackerspace.net", href: "mailto:contact@aihackerspace.net" },
-    { icon: MapPin, text: "San Francisco, CA", href: "#" },
-    { icon: Phone, text: "(555) 123-4567", href: "tel:+15551234567" },
+    { icon: Mail, text: "support@aihackerspace.net", href: "mailto:support@aihackerspace.net" },
+    { icon: MapPin, text: "Toronto, ON", href: "#" },
+    { icon: Phone, text: "(888) 231-8822", href: "tel:+18882318822" },
   ];
 
   return (
