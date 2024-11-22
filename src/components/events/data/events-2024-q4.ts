@@ -4,7 +4,7 @@ export const eventsQ4: Event[] = [
   {
     id: 3,
     title: "AI Model Optimization",
-    date: "2024-11-16",
+    date: "2024-11-15",
     time: "12:00 PM EDT",
     location: "Virtual Meeting",
     description: "Learn techniques for optimizing AI models for better performance.",
@@ -13,7 +13,7 @@ export const eventsQ4: Event[] = [
   {
     id: 4,
     title: "Natural Language Processing Workshop",
-    date: "2024-11-09",
+    date: "2024-11-08",
     time: "12:00 PM EDT",
     location: "Virtual Meeting",
     description: "Explore advanced NLP techniques and applications.",
@@ -22,7 +22,7 @@ export const eventsQ4: Event[] = [
   {
     id: 5,
     title: "Deep Learning Fundamentals",
-    date: "2024-11-02",
+    date: "2024-11-01",
     time: "12:00 PM EDT",
     location: "Virtual Meeting",
     description: "Understanding the core concepts of deep learning.",
