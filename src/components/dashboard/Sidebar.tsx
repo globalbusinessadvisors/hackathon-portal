@@ -10,7 +10,7 @@ const menuItems = {
     { name: "Session Archives", href: "/session-archives", icon: Archive }
   ],
   projects: [
-    { name: "AI Projects", href: "#ai-projects", icon: Rocket },
+    { name: "AI Projects", href: "/ai-projects", icon: Rocket },
     { name: "Hackathon Ideas", href: "#hackathon", icon: Users }
   ]
 };

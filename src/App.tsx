@@ -16,6 +16,7 @@ import RecentSessions from "./pages/RecentSessions";
 import CommunityDiscussions from "./pages/CommunityDiscussions";
 import LearningResources from "./pages/LearningResources";
 import SessionArchives from "./pages/SessionArchives";
+import AIProjects from "./pages/AIProjects";
 
 const queryClient = new QueryClient();
 
@@ -39,6 +40,7 @@ const App = () => (
           <Route path="/community-discussions" element={<CommunityDiscussions />} />
           <Route path="/learning-resources" element={<LearningResources />} />
           <Route path="/session-archives" element={<SessionArchives />} />
+          <Route path="/ai-projects" element={<AIProjects />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
