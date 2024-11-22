@@ -76,7 +76,7 @@ export const eventsQ2: Event[] = [
   {
     id: 27,
     title: "AI Model Scaling",
-    date: "2024-06-01",
+    date: "2024-05-31",
     time: "12:00 PM EDT",
     location: "Virtual Meeting",
     description: "Techniques for scaling AI models.",
