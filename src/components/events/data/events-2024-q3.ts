@@ -40,7 +40,7 @@ export const eventsQ3: Event[] = [
   {
     id: 14,
     title: "Transfer Learning Workshop",
-    date: "2024-08-31",
+    date: "2024-08-30",
     time: "12:00 PM EDT",
     location: "Virtual Meeting",
     description: "Practical applications of transfer learning.",
@@ -49,7 +49,7 @@ export const eventsQ3: Event[] = [
   {
     id: 15,
     title: "AI Privacy and Data Protection",
-    date: "2024-08-24",
+    date: "2024-08-23",
     time: "12:00 PM EDT",
     location: "Virtual Meeting",
     description: "Implementing privacy measures in AI systems.",
@@ -58,7 +58,7 @@ export const eventsQ3: Event[] = [
   {
     id: 16,
     title: "Edge AI Development",
-    date: "2024-08-17",
+    date: "2024-08-16",
     time: "12:00 PM EDT",
     location: "Virtual Meeting",
     description: "Building AI applications for edge devices.",
@@ -67,7 +67,7 @@ export const eventsQ3: Event[] = [
   {
     id: 17,
     title: "AI Testing Strategies",
-    date: "2024-08-10",
+    date: "2024-08-09",
     time: "12:00 PM EDT",
     location: "Virtual Meeting",
     description: "Best practices for testing AI systems.",
@@ -76,7 +76,7 @@ export const eventsQ3: Event[] = [
   {
     id: 18,
     title: "Federated Learning",
-    date: "2024-08-03",
+    date: "2024-08-02",
     time: "12:00 PM EDT",
     location: "Virtual Meeting",
     description: "Understanding federated learning techniques.",
