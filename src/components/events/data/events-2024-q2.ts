@@ -4,7 +4,7 @@ export const eventsQ2: Event[] = [
   {
     id: 19,
     title: "AI Model Monitoring",
-    date: "2024-07-27",
+    date: "2024-07-26",
     time: "12:00 PM EDT",
     location: "Virtual Meeting",
     description: "Implementing effective monitoring systems.",
@@ -13,7 +13,7 @@ export const eventsQ2: Event[] = [
   {
     id: 20,
     title: "Graph Neural Networks",
-    date: "2024-07-20",
+    date: "2024-07-19",
     time: "12:00 PM EDT",
     location: "Virtual Meeting",
     description: "Exploring graph neural networks.",
@@ -22,7 +22,7 @@ export const eventsQ2: Event[] = [
   {
     id: 21,
     title: "AI Ethics in Practice",
-    date: "2024-07-13",
+    date: "2024-07-12",
     time: "12:00 PM EDT",
     location: "Virtual Meeting",
     description: "Implementing ethical AI practices.",
@@ -31,7 +31,7 @@ export const eventsQ2: Event[] = [
   {
     id: 22,
     title: "Quantum Machine Learning",
-    date: "2024-07-06",
+    date: "2024-07-05",
     time: "12:00 PM EDT",
     location: "Virtual Meeting",
     description: "Introduction to quantum computing in ML.",
