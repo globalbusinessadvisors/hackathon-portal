@@ -19,6 +19,7 @@ import SessionArchives from "./pages/SessionArchives";
 import AIProjects from "./pages/AIProjects";
 import HackathonIdeas from "./pages/HackathonIdeas";
 import LearnMore from "./pages/LearnMore";
+import Members from "./pages/Members";
 
 const queryClient = new QueryClient();
 
@@ -45,6 +46,7 @@ const App = () => (
           <Route path="/ai-projects" element={<AIProjects />} />
           <Route path="/hackathon-ideas" element={<HackathonIdeas />} />
           <Route path="/learn-more" element={<LearnMore />} />
+          <Route path="/members" element={<Members />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
