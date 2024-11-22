@@ -35,7 +35,7 @@ export const Hero = () => {
         </div>
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-primary">
           Where Innovation Meets
-          <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary ml-2">
+          <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary ml-4">
             Intelligence
           </span>
         </h1>
