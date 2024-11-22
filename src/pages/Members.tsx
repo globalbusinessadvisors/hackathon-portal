@@ -15,8 +15,8 @@ interface Member {
   type: 'host' | 'presenter' | 'participant';
 }
 
-// Temporary mock data - this would typically come from your backend
-const members: Member[] = [
+// Keep existing host data
+const hosts: Member[] = [
   {
     id: "1",
     name: "Dr. Sarah Chen",
@@ -27,24 +27,6 @@ const members: Member[] = [
     type: "host"
   },
   {
-    id: "2",
-    name: "Michael Rodriguez",
-    role: "ML Engineer",
-    avatar: "/placeholder.svg",
-    expertise: ["Deep Learning", "NLP", "Python"],
-    location: "Vancouver, BC",
-    type: "presenter"
-  },
-  {
-    id: "3",
-    name: "Dr. James Wilson",
-    role: "Data Scientist",
-    avatar: "/placeholder.svg",
-    expertise: ["Statistical Analysis", "Big Data", "R"],
-    location: "Montreal, QC",
-    type: "participant"
-  },
-  {
     id: "4",
     name: "Emma Thompson",
     role: "AI Ethics Specialist",
@@ -52,17 +34,82 @@ const members: Member[] = [
     expertise: ["AI Ethics", "Policy", "Governance"],
     location: "Ottawa, ON",
     type: "host"
-  },
-  {
-    id: "5",
-    name: "David Lee",
-    role: "Research Engineer",
-    avatar: "/placeholder.svg",
-    expertise: ["Reinforcement Learning", "PyTorch", "TensorFlow"],
-    location: "Calgary, AB",
-    type: "presenter"
   }
 ];
+
+// Generate 10 presenters with diverse backgrounds
+const presenters: Member[] = Array.from({ length: 10 }, (_, i) => ({
+  id: `p${i + 1}`,
+  name: [
+    "Dr. Michael Zhang", "Prof. Lisa Kumar", "Dr. Robert Wilson", 
+    "Dr. Maria Garcia", "Prof. James Anderson", "Dr. Emily Patel",
+    "Prof. David Kim", "Dr. Rachel Cohen", "Prof. Thomas Brown",
+    "Dr. Sofia Rodriguez"
+  ][i],
+  role: [
+    "ML Research Lead", "NLP Specialist", "Robotics Engineer",
+    "Computer Vision Expert", "Deep Learning Researcher", "AI Systems Architect",
+    "Quantum Computing Lead", "Data Science Director", "AI Ethics Researcher",
+    "Neural Networks Specialist"
+  ][i],
+  avatar: "/placeholder.svg",
+  expertise: [
+    ["Machine Learning", "Deep Learning", "PyTorch"],
+    ["Natural Language Processing", "BERT", "Transformers"],
+    ["Robotics", "Computer Vision", "ROS"],
+    ["Computer Vision", "Deep Learning", "OpenCV"],
+    ["Deep Learning", "TensorFlow", "Neural Networks"],
+    ["System Design", "MLOps", "Kubernetes"],
+    ["Quantum Computing", "Algorithms", "Python"],
+    ["Data Science", "Statistics", "R"],
+    ["AI Ethics", "Responsible AI", "Policy"],
+    ["Neural Networks", "Deep Learning", "PyTorch"]
+  ][i],
+  location: [
+    "Vancouver, BC", "Montreal, QC", "Calgary, AB",
+    "Edmonton, AB", "Halifax, NS", "Winnipeg, MB",
+    "Quebec City, QC", "Victoria, BC", "Regina, SK",
+    "St. John's, NL"
+  ][i],
+  type: "presenter"
+}));
+
+// Generate 50 participants with diverse backgrounds
+const participants: Member[] = Array.from({ length: 50 }, (_, i) => ({
+  id: `part${i + 1}`,
+  name: `${[
+    "Alex", "Sam", "Jordan", "Taylor", "Morgan", "Casey", "Riley", "Quinn",
+    "Avery", "Parker"
+  ][i % 10]} ${[
+    "Smith", "Johnson", "Williams", "Brown", "Jones",
+    "Garcia", "Miller", "Davis", "Rodriguez", "Martinez"
+  ][Math.floor(i / 5) % 10]}`,
+  role: [
+    "AI Developer", "Data Scientist", "ML Engineer",
+    "Research Assistant", "Software Engineer", "Graduate Student",
+    "AI Consultant", "Data Analyst", "Research Fellow", "AI Enthusiast"
+  ][i % 10],
+  avatar: "/placeholder.svg",
+  expertise: [
+    ["Python", "TensorFlow", "Data Analysis"],
+    ["Data Science", "Machine Learning", "SQL"],
+    ["Deep Learning", "Computer Vision", "PyTorch"],
+    ["Research", "Mathematics", "Statistics"],
+    ["Software Development", "AI Integration", "Cloud Computing"],
+    ["Academic Research", "Mathematics", "Programming"],
+    ["Business Analytics", "AI Strategy", "Consulting"],
+    ["Data Analysis", "Visualization", "Python"],
+    ["Research", "Publications", "AI Ethics"],
+    ["AI Applications", "Web Development", "Cloud"]
+  ][i % 10],
+  location: [
+    "Toronto, ON", "Vancouver, BC", "Montreal, QC",
+    "Calgary, AB", "Ottawa, ON", "Edmonton, AB",
+    "Winnipeg, MB", "Quebec City, QC", "Hamilton, ON",
+    "Halifax, NS"
+  ][i % 10],
+  type: "participant"
+}));
 
 const MemberCard = ({ member }: { member: Member }) => (
   <Card className="overflow-hidden hover:shadow-lg transition-shadow">
@@ -108,10 +155,8 @@ const MemberSection = ({ title, description, members }: {
 );
 
 export default function Members() {
-  const hosts = members.filter(m => m.type === 'host');
-  const presenters = members.filter(m => m.type === 'presenter');
-  const participants = members.filter(m => m.type === 'participant');
-
+  const allMembers = [...hosts, ...presenters, ...participants];
+  
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
