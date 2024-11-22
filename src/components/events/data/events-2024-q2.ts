@@ -85,7 +85,7 @@ export const eventsQ2: Event[] = [
   {
     id: 28,
     title: "Getting Started with AI",
-    date: "2024-05-25",
+    date: "2024-05-24",
     time: "12:00 PM EDT",
     location: "Virtual Meeting",
     description: "Introduction to AI development.",
@@ -94,7 +94,7 @@ export const eventsQ2: Event[] = [
   {
     id: 29,
     title: "AI Development Fundamentals",
-    date: "2024-05-18",
+    date: "2024-05-17",
     time: "12:00 PM EDT",
     location: "Virtual Meeting",
     description: "Core concepts of AI development.",
@@ -103,7 +103,7 @@ export const eventsQ2: Event[] = [
   {
     id: 30,
     title: "Machine Learning Basics",
-    date: "2024-05-11",
+    date: "2024-05-10",
     time: "12:00 PM EDT",
     location: "Virtual Meeting",
     description: "Understanding machine learning fundamentals.",
@@ -112,7 +112,7 @@ export const eventsQ2: Event[] = [
   {
     id: 31,
     title: "Introduction to Neural Networks",
-    date: "2024-05-04",
+    date: "2024-05-03",
     time: "12:00 PM EDT",
     location: "Virtual Meeting",
     description: "Basic concepts of neural networks.",
