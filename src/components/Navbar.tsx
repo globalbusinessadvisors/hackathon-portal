@@ -1,90 +1,93 @@
 import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger } from "@/components/ui/navigation-menu";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuGroup, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { Link } from "react-router-dom";
-import { User, Settings, LogOut } from "lucide-react";
+import { User, Settings, LogOut, Menu } from "lucide-react";
 
 const Navbar = () => {
   const isLoggedIn = true;
 
+  const menuItems = [
+    { label: "Dashboard", href: "/dashboard", requiresAuth: true },
+    { label: "Events", href: "/events", requiresAuth: false },
+    { label: "Recordings", href: "/recordings", requiresAuth: false },
+    { label: "Blog", href: "/blog", requiresAuth: false },
+    { label: "Members", href: "/members", requiresAuth: false },
+  ];
+
+  const MobileNav = () => (
+    <Sheet>
+      <SheetTrigger asChild>
+        <Button variant="ghost" size="icon" className="md:hidden">
+          <Menu className="h-5 w-5" />
+          <span className="sr-only">Toggle menu</span>
+        </Button>
+      </SheetTrigger>
+      <SheetContent side="left" className="w-[300px] sm:w-[400px]">
+        <nav className="flex flex-col gap-4">
+          {menuItems.map((item) => (
+            (!item.requiresAuth || isLoggedIn) && (
+              <Link
+                key={item.href}
+                to={item.href}
+                className="block px-2 py-1 text-lg hover:text-primary"
+              >
+                {item.label}
+              </Link>
+            )
+          ))}
+        </nav>
+      </SheetContent>
+    </Sheet>
+  );
+
   return (
     <div className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
-        <NavigationMenu>
+        <div className="flex items-center gap-4">
+          <MobileNav />
+          <Link to="/" className="flex items-center space-x-2">
+            <img 
+              src="/lovable-uploads/3e6da3d8-c2eb-4fd0-ba21-01d867dce377.png" 
+              alt="AI Hackerspace" 
+              className="h-8 w-8"
+            />
+            <span className="hidden font-bold sm:inline-block text-primary">
+              AI Hackerspace
+            </span>
+          </Link>
+        </div>
+
+        <NavigationMenu className="hidden md:flex">
           <NavigationMenuList>
-            <NavigationMenuItem>
-              <Link to="/" className="mr-6 flex items-center space-x-2">
-                <img 
-                  src="/lovable-uploads/3e6da3d8-c2eb-4fd0-ba21-01d867dce377.png" 
-                  alt="AI Hackerspace" 
-                  className="h-8 w-8"
-                />
-                <span className="hidden font-bold sm:inline-block text-primary">
-                  AI Hackerspace
-                </span>
-              </Link>
-            </NavigationMenuItem>
-            {isLoggedIn && (
-              <NavigationMenuItem>
-                <Link 
-                  to="/dashboard" 
-                  className={cn(
-                    "group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50"
-                  )}
-                >
-                  Dashboard
-                </Link>
-              </NavigationMenuItem>
-            )}
-            <NavigationMenuItem>
-              <NavigationMenuTrigger>Events</NavigationMenuTrigger>
-              <NavigationMenuContent>
-                <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px]">
-                  <li className="row-span-3">
-                    <NavigationMenuLink asChild>
-                      <Link
-                        className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-                        to="/events"
-                      >
-                        <div className="mb-2 mt-4 text-lg font-medium">
-                          Upcoming Events
-                        </div>
-                        <p className="text-sm leading-tight text-muted-foreground">
-                          Join our weekly AI discussions and workshops
-                        </p>
-                      </Link>
-                    </NavigationMenuLink>
-                  </li>
-                </ul>
-              </NavigationMenuContent>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <Link to="/recordings" className={cn("group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50")}>
-                Recordings
-              </Link>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <Link to="/blog" className={cn("group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50")}>
-                Blog
-              </Link>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <Link to="/members" className={cn("group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50")}>
-                Members
-              </Link>
-            </NavigationMenuItem>
+            {menuItems.map((item) => (
+              (!item.requiresAuth || isLoggedIn) && (
+                <NavigationMenuItem key={item.href}>
+                  <Link 
+                    to={item.href} 
+                    className={cn(
+                      "group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50"
+                    )}
+                  >
+                    {item.label}
+                  </Link>
+                </NavigationMenuItem>
+              )
+            ))}
           </NavigationMenuList>
         </NavigationMenu>
 
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
-            <button className="relative h-8 w-8 rounded-full">
+            <Button variant="ghost" className="relative h-8 w-8 rounded-full">
               <Avatar>
                 <AvatarImage src="/placeholder.svg" alt="Profile" />
                 <AvatarFallback>U</AvatarFallback>
               </Avatar>
-            </button>
+            </Button>
           </DropdownMenuTrigger>
           <DropdownMenuContent className="w-56" align="end" forceMount>
             <DropdownMenuLabel className="font-normal">

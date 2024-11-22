@@ -30,11 +30,39 @@
     @apply border-border antialiased;
   }
 
+  html {
+    -webkit-tap-highlight-color: transparent;
+  }
+
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground overflow-x-hidden;
     font-feature-settings: "ss01" on, "ss02" on, "cv01" on, "cv02" on;
   }
 
+  /* Improve touch targets on mobile */
+  button, a {
+    @apply min-h-[44px] min-w-[44px];
+  }
+
+  /* Prevent text from becoming too small on mobile */
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  /* Custom scrollbar for webkit browsers */
+  ::-webkit-scrollbar {
+    @apply w-2;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-primary/20 rounded-full hover:bg-primary/30 transition-colors;
+  }
+
+  /* Utility classes */
   .glass-card {
     @apply bg-white/80 backdrop-blur-lg border border-white/20 shadow-sm hover:shadow-md transition-all duration-200;
   }
@@ -45,5 +73,32 @@
 
   .gradient-bg {
     @apply bg-gradient-to-br from-primary-light via-primary to-secondary;
+  }
+
+  /* Mobile-first padding utilities */
+  .container {
+    @apply px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Responsive typography */
+  h1 {
+    @apply text-2xl sm:text-3xl md:text-4xl font-bold;
+  }
+
+  h2 {
+    @apply text-xl sm:text-2xl md:text-3xl font-semibold;
+  }
+
+  h3 {
+    @apply text-lg sm:text-xl font-semibold;
+  }
+
+  /* Safe area insets for modern iOS devices */
+  .safe-top {
+    padding-top: env(safe-area-inset-top);
+  }
+
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
   }
 }
