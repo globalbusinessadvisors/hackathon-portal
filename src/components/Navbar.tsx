@@ -89,7 +89,11 @@ const Navbar = () => {
               </Avatar>
             </Button>
           </DropdownMenuTrigger>
-          <DropdownMenuContent className="w-56" align="end" forceMount>
+          <DropdownMenuContent 
+            className="w-56 bg-white/95 backdrop-blur-sm border border-gray-200 shadow-lg dark:bg-gray-900/95 dark:border-gray-800" 
+            align="end" 
+            forceMount
+          >
             <DropdownMenuLabel className="font-normal">
               <div className="flex flex-col space-y-1">
                 <p className="text-sm font-medium leading-none">User</p>
@@ -98,23 +102,23 @@ const Navbar = () => {
                 </p>
               </div>
             </DropdownMenuLabel>
-            <DropdownMenuSeparator />
+            <DropdownMenuSeparator className="bg-gray-200 dark:bg-gray-800" />
             <DropdownMenuGroup>
               <DropdownMenuItem asChild>
-                <Link to="/profile" className="flex w-full cursor-pointer items-center">
+                <Link to="/profile" className="flex w-full cursor-pointer items-center hover:bg-gray-100/50 dark:hover:bg-gray-800/50">
                   <User className="mr-2 h-4 w-4" />
                   Profile
                 </Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
-                <Link to="/settings" className="flex w-full cursor-pointer items-center">
+                <Link to="/settings" className="flex w-full cursor-pointer items-center hover:bg-gray-100/50 dark:hover:bg-gray-800/50">
                   <Settings className="mr-2 h-4 w-4" />
                   Settings
                 </Link>
               </DropdownMenuItem>
             </DropdownMenuGroup>
-            <DropdownMenuSeparator />
-            <DropdownMenuItem>
+            <DropdownMenuSeparator className="bg-gray-200 dark:bg-gray-800" />
+            <DropdownMenuItem className="hover:bg-gray-100/50 dark:hover:bg-gray-800/50">
               <LogOut className="mr-2 h-4 w-4" />
               <span>Log out</span>
             </DropdownMenuItem>
